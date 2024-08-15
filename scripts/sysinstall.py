@@ -203,18 +203,6 @@ def main():
     else:
         assert pip == '0'
 
-    if pymupdf_do:
-        if pymupdf_git:
-            if os.path.exists(pymupdf_dir):
-                run(f'cd {pymupdf_dir} && git pull {pymupdf_git}')
-            else:
-                run(f'git clone {pymupdf_git}')
-
-        if sudo:
-            run(f'{sudo} pip install pymupdf')
-        else:
-            run(f'pip install pymupdf')
-
     if mupdf_do:
         if sudo:
             run(f'{sudo} apk add gcc g++ make')
