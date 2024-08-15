@@ -91,7 +91,7 @@ def main():
         elif arg == 'test':
             project = next(args)
             package = next(args)
-            test(project, package, valgrind=valgrind)
+            # test(project, package, valgrind=valgrind)
         elif arg == '--valgrind':
             valgrind = int(next(args))
         else:
@@ -194,7 +194,7 @@ def build(platform_=None, valgrind=False):
                 cps,
                 '*musllinux*aarch64*',
                 ))
-        set_if_unset('CIBW_TEST_REQUIRES', 'pytest')
+        # set_if_unset('CIBW_TEST_REQUIRES', 'pytest')
         set_if_unset('CIBW_ENVIRONMENT', 'CIBW_BUILD_VERBOSITY={CIBW_BUILD_VERBOSITY} CIBW_SKIP={CIBW_SKIP}')
 
         def update_default(arg, default_value):

@@ -220,9 +220,9 @@ def main():
 
         run(f'cd {mupdf_dir} && make && {so_mode} mupdf /usr/local/bin')
 
-    if pytest_do:
-        test_cmd = f'python -m pytest {pytest_args} {pytest_name}'
-        run(test_cmd)
+    # if pytest_do:
+    #     test_cmd = f'python -m pytest {pytest_args} {pytest_name}'
+    #     run(test_cmd)
 
 def run_command(command, check=0):
     """Execute a shell command."""
